@@ -1,0 +1,59 @@
+@use '../../styles/breakpoints' as *;
+
+@mixin with-sidebar-shift {
+  @include respond-to(md) {
+    margin-left: var(--sidebar-width);
+    margin-top: 0;
+  }
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  min-height: 100vh;
+  position: relative;
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    z-index: 1000;
+
+    @include respond-to(sm) {
+      padding: 23px 25px;
+    }
+
+    @include respond-to(md) {
+      padding: 32px 36px;
+      z-index: 9999;
+      height: 100%;
+      bottom: 0;
+      width: var(--sidebar-width);
+      box-sizing: border-box;
+    }
+  }
+
+  .main-content {
+    grid-area: content;
+    overflow-y: auto;
+    min-height: calc(100vh - var(--sidebar-width));
+    margin-top: var(--header-height-mobile);
+    @include with-sidebar-shift;
+    border: 1px solid red;
+
+    @include respond-to(sm) {
+      margin-top: var(--header-height-table);
+    }
+
+    @include respond-to(md) {
+      margin-top: 0;
+    }
+  }
+}

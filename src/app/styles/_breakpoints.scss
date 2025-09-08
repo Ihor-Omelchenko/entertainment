@@ -1,0 +1,16 @@
+@use 'sass:map';
+
+$breakpoints: (
+  sm: 768px,
+  md: 1024px,
+  lg: 1440px,
+) !default;
+
+@mixin respond-to($label) {
+  @if map.has-key($breakpoints, $label) {
+    $size: map-get($breakpoints, $label);
+    @media (min-width: #{$size}) {
+      @content;
+    }
+  }
+}

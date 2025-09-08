@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@use './app/styles/variables';
+@use './app/styles/space';
+@use './app/styles/colors';
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--blue-950);
+  color: var(--white);
+}

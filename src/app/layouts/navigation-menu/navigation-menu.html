@@ -1,0 +1,26 @@
+<div class="navigation-menu">
+  <div class="logo-container">
+    <a routerLink="/home">
+      <img src="./icons/logo.svg" alt="Logo">
+    </a>
+  </div>
+
+  <div class="navigation-container">
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <img src="./icons/shape.svg" alt="Home">
+    </a>
+    <a routerLink="/movies" routerLinkActive="active">
+      <img src="./icons/movie.svg" alt="Movie">
+    </a>
+    <a routerLink="/tv-series" routerLinkActive="active">
+      <img src="./icons/tv.svg" alt="TV">
+    </a>
+    <a routerLink="/bookmarks" routerLinkActive="active">
+      <img src="./icons/bookmark.svg" alt="Bookmark">
+    </a>
+  </div>
+
+  <div class="avatar-container">
+    <img src="./icons/avatar.svg" alt="Avatar">
+  </div>
+</div>
