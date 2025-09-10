@@ -1,0 +1,124 @@
+.card {
+  width: 164px;
+  border-radius: 12px;
+  overflow: hidden;
+
+  .card-image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .image {
+      width: 100%;
+      display: block;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--black-0);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .bookmark {
+      z-index: 1;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+
+      img {
+        width: 12px;
+        height: 14px;
+        transition: filter 0.3s ease;
+      }
+
+      &:hover {
+        background: rgb(255, 255, 255);
+
+        img {
+          filter: brightness(0) saturate(100%);
+        }
+      }
+    }
+
+    .play-btn {
+      cursor: pointer;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(1px);
+      padding: 5px 20px 5px 5px;
+      border-radius: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+
+      .play-btn {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+  }
+
+  .card-info {
+    padding: 8px 0;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+
+    .metadata {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      img {
+        width: 10px;
+        height: 10px;
+        filter: brightness(0) invert(1);
+      }
+
+      span {
+        font-size: 15px;
+        line-height: 125%;
+      }
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
