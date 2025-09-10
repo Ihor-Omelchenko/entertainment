@@ -46,7 +46,7 @@
     min-height: calc(100vh - var(--sidebar-width));
     margin-top: var(--header-height-mobile);
     @include with-sidebar-shift;
-    border: 1px solid red;
+    border: 1px solid #ff006a;
 
     @include respond-to(sm) {
       margin-top: var(--header-height-table);
