@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 import { MediaApiService } from '../services';
 import { MediaStore } from '../store';
 import { finalize, tap } from 'rxjs';
-import { MovieMapper } from '../mappers';
+import { MediaMapper } from '../mappers';
 
 @Injectable()
 export class GetListMovies {
@@ -14,7 +14,7 @@ export class GetListMovies {
 
     this.mediaApiService.getMovies(page).pipe(
       tap(response =>  {
-        this.mediaStore.data.set(response.results.map(MovieMapper.toMovie));
+        this.mediaStore.data.set(response.results.map(MediaMapper.toMedia));
       }),
       finalize(() => {
         this.mediaStore.loading.set(true);

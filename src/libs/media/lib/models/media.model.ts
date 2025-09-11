@@ -1,5 +1,4 @@
-import { MovieBaseInterface } from '../interfaces/movie';
-import { TvBaseInterface } from '../interfaces/tv';
+import { MovieBaseInterface, TvBaseInterface } from '../interfaces';
 
 export class Media {
 

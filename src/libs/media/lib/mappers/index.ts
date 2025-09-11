@@ -1,1 +1,1 @@
-export * from './movie.mapper';
+export * from './media.mapper';
