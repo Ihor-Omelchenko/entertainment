@@ -1,0 +1,5 @@
+export const environment = {
+  production: true,
+  apiToken: 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZjY5NWQ3OWFkNzk2NDJjMzczYTczN2NjMTA1NmJjMyIsIm5iZiI6MTc1NzU5MTI1MS4yODAzMTE2LCJqdGkiOiI2OGMyYjZkMzRjMzlhNmJmYzUwYTMwOTkiLCJzY29wZXMiOlsicGVuZGluZ19yZXF1ZXN0X3Rva2VuIl0sInZlcnNpb24iOjIsImV4cCI6MTc1NzU5MjE1MX0.a8YIAIQsBenjCetDDCL7LPwfHHECJHM5cgxZ5Xfri68',
+  apiUrl: 'https://api.themoviedb.org/3'
+};
