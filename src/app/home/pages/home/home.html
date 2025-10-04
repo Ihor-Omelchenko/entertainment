@@ -1,3 +1,7 @@
 <div class="wrapper">
-
+  <div class="grid-card">
+    @for (movie of this.mediaStore.data(); track movie.id) {
+      <app-card [data]="movie"/>
+    }
+  </div>
 </div>
